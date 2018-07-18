@@ -8,29 +8,31 @@ import toggleCircumventionDrawer from 'redux-store/actions/toggleCircumventionDr
 import { Audience } from 'helpers/graphql-types'
 
 export const languageName = 'አማኛ'
+export const languageCode = 'am'
 
-export const graphqlAudience = Audience.enus
+export const graphqlAudience = Audience.am
 
 export const articleLabels = {
-  updatedOn: (date: string) => `Updated on ${date}`,
-  relatedContent: 'Related stories',
-  shareMessage: '',
-  galleryLoading: 'Gallery loading...',
+  updatedOn: (date: string) => `በ${date} የታደሰ`,
+  relatedContent: 'የሚገናኝ ይዘት',
+  shareMessage: 'ይህንን ፅሁፍ ይዩ',
+  galleryLoading: 'እየተጫነ ነው...',
 }
 
 export const categorySettingsLabels = {
-  header: 'Choose Categories',
-  myCategories: 'My Categories',
-  allCategories: 'All Categories',
-  dragAndDrop: 'Drag Categories',
-  headlinesFirst: 'Headline Category is First',
+  header: 'ምድቦቹን በቅደም ተከተል አስቀምጥ',
+  myCategories: 'የኔ ምድቦች',
+  allCategories: 'ሁሉም ምድቦች',
+  dragAndDrop: 'ምድቦችዎን ወደዚህ ይሳቡ',
+  headlinesFirst: 'አርዕስቱን በቅድሚያ አሥፍር',
+  cancel: 'Cancel',
 }
 
 export const circumventionDrawerLabels = {
   enabledContent: (
     <div>
       <p>
-        Using Secure VPN.
+        እገዳን የማለፊያ ዘዴን ለተጠቃሚዎች አብራራ
       </p>
       <p>
         You can change this in
@@ -44,7 +46,7 @@ export const circumventionDrawerLabels = {
   disabledContent: (
     <div>
       <p>
-        Secure VPN is off.
+        እገዳን የማለፊያ ዘዴን ለተጠቃሚዎች አብራራ
       </p>
       <p>
         You can change this in
@@ -58,90 +60,78 @@ export const circumventionDrawerLabels = {
 }
 
 export const editorsChoiceLabels = {
-  header: 'Editor\'s Choice',
+  header: 'የኤዲተር ምርጫ',
 }
 
 export const errorBoundaryLabels = {
-  error: 'An error occurred.',
-  retry: 'Retry',
+  error: 'አንዳች ችግር ተፈጥሯል',
+  retry: 'እንደገና ይሞክሩ',
 }
 
 export const favoritesSettingsLabels = {
-  header: 'My Favorites',
-  removeAll: 'Remove All Favorites',
+  header: 'ተወዳጆች',
+  removeAll: 'ሁሉንም አጥፋ',
 }
 
 export const homeLabels = {
-  headlines: 'Headlines',
-  search: 'Search',
+  headlines: 'አርዕስት',
+  search: 'ፈልግ',
   manage: '+',
 }
 
 export const introLabels = {
-  content: 'Welcome to Voice of America!',
-  continue: 'Continue',
-}
-
-const hilight: React.CSSProperties = {
-  color: '#0162B1',
+  continue: 'ወደ ተከታዩ እለፍ...',
+  primary: 'Primary language',
+  primaryDescription: 'This is the language the app text will appear in',
+  secondary: 'Secondary language',
+  secondaryDescription: 'This determines the default categories to pull articles from',
 }
 
 export const mediaPlayerLabels = {
   empty: (
     <div>
-      <p>
-        This is VoA's <span style={hilight}>multimedia</span> player. When you play audio or video content, it will play here.
-      </p>
-      <p>
-        You can continue to navigate the app without stopping the <span style={hilight}>multimedia</span> by closing the drawer.
-      </p>
-      <p>
-        Use the round <span style={hilight}>multimedia</span> button at the bottom of the screen to open this screen again.
-      </p>
-      <p>
-        You can also start and stop the <span style={hilight}>multimedia</span> by pressing the button at the bottom while this screen is open.
-      </p>
+      የመረጧቸው የድምፅና የቪድዮ ፋይሎች የሚጫወቱት እዚህ ነው። ከሥር ከተቀመጠው ዝርዝር በመምረጥ ይጀምሩ። ይህንን ስክሪን ለመዝጋት የድምፅ/ቪድዮ ማጫወቻውን ሳያቆሙ ወደታች በመጥረግ ሊዘጉትና ፅሁፎችን ማንበብ መቀጠል ይችላሉ። የማጫወቻውን መስኮት እንደገና መክፈት ከፈለጉ ባሉበት ስክሪን የታችኛው ወለል መሃል ላይ ያለውን ክብ ቁልፍ ወደላይ ይጥረጉት። ድምፁንም ሆነ ቪድዮውን ለማጫወትም ለማቆምም የማጫወቻውን ምልክት ይጫኑ።
     </div>
   ),
-  loading: 'Loading media...',
+  loading: 'እየተከፈተ ነው',
 }
 
 export const mediaSettingsLabels = {
   normalSpeed: '1x',
   halfAgainSpeed: '1.5x',
   doubleSpeed: '2x',
-  chooseSpeed: 'Media playback speed',
+  chooseSpeed: 'ፍጥነት',
 }
 
 export const programsScreenLabels = {
-  videos: 'Video',
-  audio: 'Audio',
-  empty: 'No content',
+  videos: 'ቪድዮ መጠየቂያ',
+  audio: 'ድምፅ መጠየቂያ',
+  empty: 'ባዶ ነው',
 }
 
 export const pullToRefreshLabels = {
-  pull: 'Pull to refresh',
-  release: 'Release to refresh',
+  pull: 'ይዘቱን ለማደስ ይሳቡት',
+  release: 'ይዘቱን ለማደስ ይልቀቁት',
 }
 
 export const searchLabels = {
-  header: 'Search',
-  back: 'Back',
-  all: 'All',
-  query: 'Search',
-  empty: 'No content',
+  header: 'የፍለጋ ውጤቶች',
+  back: 'ወደኋላ',
+  all: 'ሁሉም',
+  query: 'ፈልግ',
+  empty: 'የሚፈልጉት አልተገኘም',
 }
 
 export const settingsLabels = {
-  header: 'My Settings',
-  panic: 'Reset the App',
-  sendToFriends: 'Share with friends',
-  sendFeedback: 'Send us feedback',
+  header: 'የራሴ ማረቂያዎች',
+  panic: 'ፈጣን ቁልፍ',
+  sendToFriends: 'ይህንን አፕ ለጓደኞችህ ላክ',
+  sendFeedback: 'ለቪኦኤ አስተያየትዎን ይላኩ',
   aboutVoa: 'The Voice of America (VOA) publishes accurate, balanced, and comprehensive news and information to an international audience. It started in 1942 as a radio news service for people living in closed and war-torn societies and has since grown into a multimedia news operation. VOA now reaches people on web, mobile devices and social media in more than 40 languages.',
-  feedbackEmail: 'app@voanews.com',
-  feedbackSubject: encodeURIComponent('VOA Mobile App'),
+  feedbackEmail: 'horn@voanews.com',
+  feedbackSubject: encodeURIComponent('የቪኦኤ አማርኛ የሞባይል አፕ አስተያየት መስጫ'),
   feedbackBody: encodeURIComponent(''),
-  shareMessage: 'Check out the VOA mobile app',
+  shareMessage: 'ይህንን አፕ ሞክረ/ሪው',
   psiphon: 'Secure VPN',
   psiphonOn: 'On',
   psiphonOff: 'Off',
@@ -150,7 +140,7 @@ export const settingsLabels = {
 }
 
 export const textSettingsLabels = {
-  textSize: 'Article font size',
+  textSize: 'የፊደላቱን መጠን አስተካክልe',
   normalSize: '1x',
   largeSize: '1.5x',
   hugeSize: '2x',

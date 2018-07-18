@@ -2,11 +2,21 @@
 //  This file was automatically generated and should not be edited.
 
 export enum Audience {
+  am = "am",
+  bo = "bo",
   en = "en",
   enus = "enus",
-  zhcn = "zhcn",
-  zhtw = "zhtw",
+  es = "es",
   fa = "fa",
+  ko = "ko",
+  om = "om",
+  prs = "prs",
+  pus = "pus",
+  ru = "ru",
+  tg = "tg",
+  ur = "ur",
+  vi = "vi",
+  zhcn = "zhcn",
 }
 
 

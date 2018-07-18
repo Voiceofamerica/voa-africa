@@ -6,9 +6,9 @@ import { setDirection } from '@voiceofamerica/voa-shared/helpers/textDirectionHe
 
 import store from 'redux-store'
 
-import * as AfaanOromo from './labels/labels.om'
-import * as Amharic from './labels/labels.am'
-import * as Tigrinya from './labels/labels.ti'
+import * as AfaanOromo from 'labels/labels.om'
+import * as Amharic from 'labels/labels.am'
+import * as Tigrigna from 'labels/labels.tg'
 
 setAnalyticsOptions({
   language: 'english',
@@ -23,25 +23,28 @@ setDirection('ltr')
 
 moment.locale('en-us')
 
-const getCurrentLabels = (): (typeof AfaanOromo | typeof Amharic | typeof Tigrinya) & Object => {
+const getCurrentLabels = (): (typeof AfaanOromo | typeof Amharic | typeof Tigrigna) & Object => {
   const { languageSettings: { primaryLanguage } } = store.getState()
-  if (primaryLanguage === 'om') {
+  if (primaryLanguage === AfaanOromo.languageCode) {
     return AfaanOromo
-  } else if (primaryLanguage === 'am') {
+  } else if (primaryLanguage === Amharic.languageCode) {
     return Amharic
-  } else if (primaryLanguage === 'ti') {
-    return Tigrinya
+  } else if (primaryLanguage === Tigrigna.languageCode) {
+    return Tigrigna
   } else {
     return AfaanOromo
   }
 }
 
-const labelProxy = new Proxy<typeof AfaanOromo>(AfaanOromo, {
+const labelProxy = new Proxy<typeof AfaanOromo & { getCurrentLabels: typeof getCurrentLabels }>(AfaanOromo as any, {
   has: (target, key) => {
     const labels = getCurrentLabels() || target
     return labels.hasOwnProperty(key)
   },
   get: (target, key) => {
+    if (key === 'getCurrentLabels') {
+      return getCurrentLabels
+    }
     const labels = getCurrentLabels() || target
     return labels[key]
   },

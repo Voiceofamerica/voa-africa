@@ -1,12 +1,16 @@
 
 import * as React from 'react'
 import { RouteComponentProps } from 'react-router'
+import { compose } from 'redux'
+import { connect } from 'react-redux'
 import TopNav, { TopNavItem, StaticItem } from '@voiceofamerica/voa-shared/components/TopNav'
 import ThemeProvider from '@voiceofamerica/voa-shared/components/ThemeProvider'
 
 import analytics, { AnalyticsProps } from '@voiceofamerica/voa-shared/helpers/analyticsHelper'
 import ErrorBoundary from 'components/ErrorBoundary'
 import Category from 'types/Category'
+import LanguageCode from 'types/LanguageCode'
+import AppState from 'types/AppState'
 import { programsScreenLabels } from 'labels'
 
 import TopNavTheme from './TopNavTheme'
@@ -26,8 +30,13 @@ const PROGRAM_ZONES: Category[] = [
   },
 ]
 
-interface Props extends RouteComponentProps<Params>, AnalyticsProps {
+interface StateProps {
+  secondaryLanguages: LanguageCode[]
 }
+
+type OwnProps = RouteComponentProps<Params> & AnalyticsProps
+
+type Props = StateProps & OwnProps
 
 class ProgramsScreen extends React.Component<Props> {
   setProgramType = (programType: ProgramType) => {
@@ -120,4 +129,13 @@ const withAnalytics = analytics<Props>({
   title: 'Programs',
 })
 
-export default withAnalytics(ProgramsScreen)
+const mapStateToProps = ({ languageSettings: { secondaryLanguages } }: AppState): StateProps => ({
+  secondaryLanguages,
+})
+
+const withRedux = connect<StateProps, {}, OwnProps>(mapStateToProps)
+
+export default compose(
+  withAnalytics,
+  withRedux,
+)(ProgramsScreen)

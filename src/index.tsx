@@ -8,7 +8,7 @@ import { setPsiphonConfig } from '@voiceofamerica/voa-shared/helpers/psiphonHelp
 
 import './globalStyle.scss'
 
-import App from './containers/App'
+import App from 'containers/App'
 
 isWebHost(__HOST__)
 setPsiphonConfig(require('./psiphon_config.json'))

@@ -1,5 +1,5 @@
 
-// Afaan Oromo
+// Tigrigna
 import * as React from 'react'
 import { push } from 'react-router-redux'
 import store from 'redux-store'
@@ -7,24 +7,24 @@ import toggleCircumventionDrawer from 'redux-store/actions/toggleCircumventionDr
 
 import { Audience } from 'helpers/graphql-types'
 
-export const languageName = 'Afaan Oromoo'
-export const languageCode = 'om'
+export const languageName = 'ትግርኛ'
+export const languageCode = 'tg'
 
-export const graphqlAudience = Audience.om
+export const graphqlAudience = Audience.tg
 
 export const articleLabels = {
-  updatedOn: (date: string) => `Updated on ${date}`,
-  relatedContent: 'Qbiyyee wal simu',
-  shareMessage: 'Mata duree kana ilaali',
-  galleryLoading: 'Fe\'aa jira',
+  updatedOn: (/*date: string*/) => `ዕለት ኣሓድስ`,
+  relatedContent: 'Related stories',
+  shareMessage: 'ኣብ`ዚ ጽሑፍ ርአ',
+  galleryLoading: 'ይጽዕን ኣሎ',
 }
 
 export const categorySettingsLabels = {
-  header: 'Wal duraa duuba ulaagaalee',
-  myCategories: 'Hirmaata',
-  allCategories: 'Hirmaata mara',
-  dragAndDrop: 'Mata duree jeloo',
-  headlinesFirst: 'Mata dureelee jalqaba tarreeffaman',
+  header: 'ንመደባት ኣቐድም',
+  myCategories: 'ናተይ ምድባት',
+  allCategories: 'ኩሉ ምድባት',
+  dragAndDrop: 'ምድባትካ ናብ`ዚ ሰሓብ',
+  headlinesFirst: 'ኣርእስትታት መጀመርያ ዘርዝር',
   cancel: 'Cancel',
 }
 
@@ -32,7 +32,7 @@ export const circumventionDrawerLabels = {
   enabledContent: (
     <div>
       <p>
-      Teeknooloojii haaraa uggura marsariitii jalaa itti miliqan beeksisi
+      መሕለፊ ተክኖሎጂ ንተጠቀምቲ ግለጽ
       </p>
       <p>
         You can change this in
@@ -46,7 +46,7 @@ export const circumventionDrawerLabels = {
   disabledContent: (
     <div>
       <p>
-      Teeknooloojii haaraa uggura marsariitii jalaa itti miliqan beeksisi
+      መሕለፊ ተክኖሎጂ ንተጠቀምቲ ግለጽ
       </p>
       <p>
         You can change this in
@@ -60,27 +60,27 @@ export const circumventionDrawerLabels = {
 }
 
 export const editorsChoiceLabels = {
-  header: 'Filmaata Gullaalaa',
+  header: 'ምርጫ ኤዲተራት',
 }
 
 export const errorBoundaryLabels = {
-  error: 'Waan sirrii hin taanetu jira',
-  retry: 'Irra deebi\'ii yaali',
+  error: 'ገለ ጌጋ `ሎ',
+  retry: 'እንደገና ፈትን',
 }
 
 export const favoritesSettingsLabels = {
-  header: 'Kan jaal\'atamu',
-  removeAll: 'Mallattoo mara haqi',
+  header: 'ዝያዳ ተደላዪ',
+  removeAll: 'ንኹሉ ሰርዝ',
 }
 
 export const homeLabels = {
-  headlines: 'Mata duree',
-  search: 'Barbaadi',
+  headlines: 'ኣርእስትታት',
+  search: 'Search',
   manage: '+',
 }
 
 export const introLabels = {
-  continue: 'Itti fufi',
+  continue: 'ቀጽል',
   primary: 'Primary language',
   primaryDescription: 'This is the language the app text will appear in',
   secondary: 'Secondary language',
@@ -91,49 +91,49 @@ export const mediaPlayerLabels = {
   empty: (
     <div>
       <p>
-      Kuusaan sabaa himaa duwwaa ennaa ta'u ibsa itti kenni.
+      ንመጻወቲ ወይ ንመልቲሚድያ ድረወር ግለጽ
       </p>
     </div>
   ),
-  loading: 'Fe\'aa jira',
+  loading: 'ይጽዕን ኣሎ',
 }
 
 export const mediaSettingsLabels = {
   normalSpeed: '1x',
   halfAgainSpeed: '1.5x',
   doubleSpeed: '2x',
-  chooseSpeed: 'Saffisa sagalee waraabamee',
+  chooseSpeed: 'ፕለይባክ ስፒድ',
 }
 
 export const programsScreenLabels = {
-  videos: 'Viidiyoo On Demand irraa',
-  audio: 'Audio',
-  empty: 'Qabiyyee hin qabu',
+  videos: 'ኣብ ተጠላቢ ቪድዮ',
+  audio: 'ኣብ ተጠላቢ ኦድዮ',
+  empty: 'ትሕዝቶ የብሉን',
 }
 
 export const pullToRefreshLabels = {
-  pull: 'Haaressuuf harkisi',
-  release: 'Haaressuuf gad dhiisi',
+  pull: 'ንምሕዳስ ጠውቕ',
+  release: 'ንምሕዳስ ፈንው',
 }
 
 export const searchLabels = {
-  header: 'Ba\'ii argame',
-  back: 'Boodatti deebii',
-  all: 'Hundumaa',
-  query: 'Barbaadi',
-  empty: 'Ba\'iin argame hin jiru',
+  header: 'ውጽኢት ፍተሻ',
+  back: 'ንድሕሪት',
+  all: 'ኩሎም',
+  query: 'ፈትሽ',
+  empty: 'ዝተረኽበ ውጽኢት የለን',
 }
 
 export const settingsLabels = {
-  header: 'Qindeessa',
-  panic: 'Mallattoo furutuu yeroo hatattamaa',
-  sendToFriends: 'Appii kana hiriyaa waliin hirmaadhu',
-  sendFeedback: 'VOA dhaaf yaada kee ergi',
-  aboutVoa: 'VOAn maal akka hojjetu ibsi',
+  header: 'ናተይ ቦታ መዋደዲ',
+  panic: 'ፓኒክ ባተን ሰይም',
+  sendToFriends: 'ነዚ ኣፕ ምስ መሓዙትካ ኣማቕል',
+  sendFeedback: 'ናብ ቪኦኤ ርእይቶኻ ስደድ',
+  aboutVoa: 'ቪኦኤ ዝገብሮ ግለጽ',
   feedbackEmail: 'horn@voanews.com',
-  feedbackSubject: encodeURIComponent('Mata duree Email yaadi itti kennamu'),
-  feedbackBody: encodeURIComponent('Qabiyyee emial ergamee'),
-  shareMessage: 'Appii kana yaali',
+  feedbackSubject: encodeURIComponent('ኣርእስቲ ርእይቶ ኢመይል'),
+  feedbackBody: encodeURIComponent('ትሕዝቶ ርእይቶ ኢመይል'),
+  shareMessage: 'ነዚ ኣፕ ርኣዮ',
   psiphon: 'Secure VPN',
   psiphonOn: 'On',
   psiphonOff: 'Off',
@@ -142,7 +142,7 @@ export const settingsLabels = {
 }
 
 export const textSettingsLabels = {
-  textSize: 'Foontii qubee tolchi',
+  textSize: 'ዓቐን ፊደላት',
   normalSize: '1x',
   largeSize: '1.5x',
   hugeSize: '2x',

@@ -2,6 +2,6 @@
 type LanguageCode =
   | 'om' // Afaan Oromo
   | 'am' // Amharic
-  | 'ti' // Tigrinya
+  | 'tg' // Tigrigna
 
 export default LanguageCode
