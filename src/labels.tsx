@@ -13,10 +13,10 @@ import * as Tigrigna from 'labels/labels.tg'
 setAnalyticsOptions({
   language: 'english',
   languageService: 'english',
-  propertyName: 'english',
+  propertyName: 'voa horn news app',
   propertyId: 'something',
-  rsidAccount: 'something',
-  reportSuite: 'something',
+  rsidAccount: 'bbgvoa.horn.streaming.app',
+  reportSuite: 'bbgvoa.horn.streaming.app',
 })
 
 setDirection('ltr')
