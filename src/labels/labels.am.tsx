@@ -109,6 +109,11 @@ export const programsScreenLabels = {
   empty: 'ባዶ ነው',
 }
 
+export const psiphonLoadingLabels = {
+  bold: 'Please be patient.',
+  text: 'This may take a few minutes while we gather the best information for you.',
+}
+
 export const pullToRefreshLabels = {
   pull: 'ይዘቱን ለማደስ ይሳቡት',
   release: 'ይዘቱን ለማደስ ይልቀቁት',
