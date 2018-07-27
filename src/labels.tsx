@@ -36,7 +36,7 @@ const getCurrentLabels = (): (typeof AfaanOromo | typeof Amharic | typeof Tigrig
   }
 }
 
-const labelProxy = new Proxy<typeof AfaanOromo & { getCurrentLabels: typeof getCurrentLabels }>(AfaanOromo as any, {
+const labelProxy = new Proxy<(typeof AfaanOromo & typeof Amharic & typeof Tigrigna) & { getCurrentLabels: typeof getCurrentLabels }>(AfaanOromo as any, {
   has: (target, key) => {
     const labels = getCurrentLabels() || target
     return labels.hasOwnProperty(key)
