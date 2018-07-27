@@ -12,6 +12,7 @@ import { routerActions } from 'react-router-redux'
 import setMediaPlaybackRate from 'redux-store/actions/setMediaPlaybackRate'
 import setTextSize from 'redux-store/actions/setTextSize'
 import togglePsiphonThunk from 'redux-store/thunks/togglePsiphon'
+import setLanguageCompletionState from 'redux-store/actions/setLanguageCompletionState'
 import AppState from 'types/AppState'
 
 import {
@@ -70,6 +71,8 @@ interface DispatchProps {
   setTextSize: (size: number) => void
   setPlaybackRate: (speed: number) => void
   togglePsiphon: (enabled: boolean) => void
+  resetPrimaryLanguage: () => void
+  resetSecondaryLanguages: () => void
 }
 
 type RouteProps = RouteComponentProps<void>
@@ -113,6 +116,30 @@ class SettingsRoute extends React.Component<Props> {
       <div className={settingsRow}>
         <button className={settingsButton} onClick={() => history.push(`/settings/categories`)}>
           {categorySettingsLabels.header}
+        </button>
+      </div>
+    )
+  }
+
+  renderPrimaryLanguageReset () {
+    const { resetPrimaryLanguage } = this.props
+
+    return (
+      <div className={settingsRow}>
+        <button className={settingsButton} onClick={resetPrimaryLanguage}>
+          {settingsLabels.resetPrimaryLanguage}
+        </button>
+      </div>
+    )
+  }
+
+  renderSecondaryLanguagesReset () {
+    const { resetSecondaryLanguages } = this.props
+
+    return (
+      <div className={settingsRow}>
+        <button className={settingsButton} onClick={resetSecondaryLanguages}>
+          {settingsLabels.resetSecondaryLanguages}
         </button>
       </div>
     )
@@ -231,6 +258,8 @@ class SettingsRoute extends React.Component<Props> {
           <div className={buttons}>
             { this.renderFavoritesSettings() }
             { this.renderCategoriesSettings() }
+            { this.renderPrimaryLanguageReset() }
+            { /* this.renderSecondaryLanguagesReset() */ }
             { this.renderTextSettings() }
             { this.renderPlaybackSpeed() }
             { this.renderPsiphonToggle() }
@@ -298,6 +327,10 @@ const mapDispatchToProps = (dispatch: Dispatch<any>): DispatchProps => ({
     dispatch(setMediaPlaybackRate({ mediaPlaybackRate })),
   togglePsiphon: (psiphonEnabled) =>
     dispatch(togglePsiphonThunk({ psiphonEnabled })),
+  resetPrimaryLanguage: () =>
+    dispatch(setLanguageCompletionState({ primaryLanguageSet: false })),
+  resetSecondaryLanguages: () =>
+    null, // dispatch(setLanguageCompletionState({ secondaryLanguagesSet: false })),
 })
 
 const withRedux = connect(mapStateToProps, mapDispatchToProps)

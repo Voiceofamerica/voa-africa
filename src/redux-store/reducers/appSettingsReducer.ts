@@ -19,10 +19,15 @@ import {
   SetTextSizeAction,
 } from '../actions/setTextSize'
 
+// import {
+//   type as setSecondaryLanguagesType,
+//   SetSecondaryLanguagesAction,
+// } from '../actions/setSecondaryLanguages'
+
 import {
-  type as setSecondaryLanguagesType,
-  SetSecondaryLanguagesAction,
-} from '../actions/setSecondaryLanguages'
+  type as setPrimaryLanguageType,
+  SetPrimaryLanguageAction,
+} from '../actions/setPrimaryLanguage'
 
 import { ActorMap, buildReducer } from '../actorMap'
 import AppSettings from 'types/AppSettings'
@@ -130,16 +135,31 @@ const actors: ActorMap<AppSettings> = {
     ...prev,
     textSize,
   }),
-  [setSecondaryLanguagesType]: (prev, { secondaryLanguages }: SetSecondaryLanguagesAction) => {
+  // [setSecondaryLanguagesType]: (prev, { secondaryLanguages }: SetSecondaryLanguagesAction) => {
+  //   let categories = []
+  //   if (secondaryLanguages.includes(AfaanOromoo.languageCode)) {
+  //     categories = [...categories, ...afaanOromooCategories]
+  //   }
+  //   if (secondaryLanguages.includes(Amharic.languageCode)) {
+  //     categories = [...categories, ...amharicCategories]
+  //   }
+  //   if (secondaryLanguages.includes(Tigrigna.languageCode)) {
+  //     categories = [...categories, ...tigrignaCategories]
+  //   }
+  //
+  //   return {
+  //     ...prev,
+  //     categories,
+  //   }
+  // },
+  [setPrimaryLanguageType]: (prev, { primaryLanguage }: SetPrimaryLanguageAction) => {
     let categories = []
-    if (secondaryLanguages.includes(AfaanOromoo.languageCode)) {
-      categories = [...categories, ...afaanOromooCategories]
-    }
-    if (secondaryLanguages.includes(Amharic.languageCode)) {
-      categories = [...categories, ...amharicCategories]
-    }
-    if (secondaryLanguages.includes(Tigrigna.languageCode)) {
-      categories = [...categories, ...tigrignaCategories]
+    if (primaryLanguage === AfaanOromoo.languageCode) {
+      categories = afaanOromooCategories
+    } else if (primaryLanguage === Amharic.languageCode) {
+      categories = amharicCategories
+    } else if (primaryLanguage === Tigrigna.languageCode) {
+      categories = tigrignaCategories
     }
 
     return {

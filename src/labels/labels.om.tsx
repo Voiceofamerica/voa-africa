@@ -142,6 +142,8 @@ export const settingsLabels = {
   psiphon: 'Secure VPN',
   psiphonOn: 'On',
   psiphonOff: 'Off',
+  resetPrimaryLanguage: 'Reset primary language',
+  resetSecondaryLanguages: 'Reset secondary languages',
   takeEffectOnRestart: 'You must restart the app for your changes to take effect.',
   okay: 'Okay',
 }
