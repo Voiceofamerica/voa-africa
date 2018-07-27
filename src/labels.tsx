@@ -11,10 +11,10 @@ import * as Amharic from 'labels/labels.am'
 import * as Tigrigna from 'labels/labels.tg'
 
 setAnalyticsOptions({
-  language: 'english',
-  languageService: 'english',
+  language: 'horn',
+  languageService: 'horn',
   propertyName: 'voa horn news app',
-  propertyId: 'something',
+  propertyId: '398',
   rsidAccount: 'bbgvoa.horn.streaming.app',
   reportSuite: 'bbgvoa.horn.streaming.app',
 })
