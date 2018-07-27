@@ -39,31 +39,31 @@ import * as Tigrigna from 'labels/labels.tg'
 
 const amharicCategories: Category[] = [
   {
-    name: 'News',
+    name: 'ዜና',
     id: 3167,
   },
   {
-    name: 'Video',
+    name: 'ቪድዮ',
     id: 3317,
   },
   {
-    name: 'Photo Gallery',
+    name: 'የፎቶ መድብሎች',
     id: 3174,
   },
   {
-    name: 'Gabina',
+    name: 'ጋቢና ቪኦኤ',
     id: 4011,
   },
   {
-    name: 'Amharic News 1800',
+    name: 'ከምሽቱ ሦስት ሰዓት የአማርኛ ዜና',
     id: 3303,
   },
   {
-    name: 'Features',
+    name: 'ሳምንታዊ ዝግጅቶች',
     id: 3173,
   },
   {
-    name: 'Special Reports and Programs',
+    name: 'ልዩ ዘገባዎች',
     id: 4520,
   },
 ]
@@ -93,27 +93,27 @@ const afaanOromooCategories: Category[] = [
 
 const tigrignaCategories: Category[] = [
   {
-    name: 'News',
+    name: 'ዜና',
     id: 2914,
   },
   {
-    name: 'Video',
+    name: 'ቪድዮ',
     id: 3312,
   },
   {
-    name: 'Photo Gallery',
+    name: 'ዓምዲ ኣሳእል',
     id: 2921,
   },
   {
-    name: 'Eritreans In America',
+    name: 'ኤርትራውያን ኣብ ኣመሪካ',
     id: 2917,
   },
   {
-    name: 'People To People',
+    name: 'ህዝቢ ምስ ህዝቢ',
     id: 2920,
   },
   {
-    name: 'Special Reports',
+    name: 'ፍሉይ ዓምዲ',
     id: 4522,
   },
 ]
