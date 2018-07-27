@@ -61,9 +61,9 @@ class HomeRouteBase extends React.Component<Props, State> {
     const { category } = this.props.match.params
     return (
       <div className={row}>
-        <button className={searchButton} onClick={() => this.goTo(`/search/${category}`)}>
+        <a className={searchButton} onClick={() => this.goTo(`/search/${category}`)}>
           {homeLabels.search}
-        </button>
+        </a>
       </div>
     )
   }

@@ -42,9 +42,9 @@ class EditorsChoiceBase extends React.Component<Props, State> {
   private renderSearchButton = () => {
     return (
       <div className={row}>
-        <button className={searchButton} onClick={() => this.goTo('/search')}>
+        <a className={searchButton} onClick={() => this.goTo('/search')}>
           {homeLabels.search}
-        </button>
+        </a>
       </div>
     )
   }
