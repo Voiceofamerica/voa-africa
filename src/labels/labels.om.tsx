@@ -139,7 +139,7 @@ export const settingsLabels = {
   feedbackSubject: encodeURIComponent('Mata duree Email yaadi itti kennamu'),
   feedbackBody: encodeURIComponent('Qabiyyee emial ergamee'),
   shareMessage: 'Appii kana yaali',
-  psiphon: 'Secure VPN',
+  psiphon: 'Secure proxy',
   psiphonOn: 'On',
   psiphonOff: 'Off',
   resetPrimaryLanguage: 'Reset primary language',

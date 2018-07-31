@@ -139,7 +139,7 @@ export const settingsLabels = {
   feedbackSubject: encodeURIComponent('ኣርእስቲ ርእይቶ ኢመይል'),
   feedbackBody: encodeURIComponent('ትሕዝቶ ርእይቶ ኢመይል'),
   shareMessage: 'ነዚ ኣፕ ርኣዮ',
-  psiphon: 'Secure VPN',
+  psiphon: 'Secure proxy',
   psiphonOn: 'On',
   psiphonOff: 'Off',
   resetPrimaryLanguage: 'Reset primary language',

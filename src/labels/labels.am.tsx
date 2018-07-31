@@ -137,7 +137,7 @@ export const settingsLabels = {
   feedbackSubject: encodeURIComponent('የቪኦኤ አማርኛ የሞባይል አፕ አስተያየት መስጫ'),
   feedbackBody: encodeURIComponent(''),
   shareMessage: 'ይህንን አፕ ሞክረ/ሪው',
-  psiphon: 'Secure VPN',
+  psiphon: 'Secure proxy',
   psiphonOn: 'On',
   psiphonOff: 'Off',
   resetPrimaryLanguage: 'Reset primary language',
