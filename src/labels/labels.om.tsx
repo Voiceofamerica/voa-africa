@@ -7,6 +7,7 @@ import toggleCircumventionDrawer from 'redux-store/actions/toggleCircumventionDr
 
 import { Audience } from 'helpers/graphql-types'
 
+export const appTopic = 'om'
 export const languageName = 'Afaan Oromoo'
 export const languageCode = 'om'
 
@@ -25,7 +26,7 @@ export const categorySettingsLabels = {
   allCategories: 'Hirmaata mara',
   dragAndDrop: 'Mata duree jeloo',
   headlinesFirst: 'Mata dureelee jalqaba tarreeffaman',
-  cancel: 'Cancel',
+  cancel: 'Haqi',
 }
 
 export const circumventionDrawerLabels = {
@@ -35,11 +36,13 @@ export const circumventionDrawerLabels = {
       Teeknooloojii haaraa uggura marsariitii jalaa itti miliqan beeksisi
       </p>
       <p>
-        You can change this in
+      Quunnamtiin VOA waliin gootan ka dhuunfaa fi ni dhoksama
+      </p>
+      <p>
         <a href='#' onClick={() => {
           store.dispatch(push('/settings'))
           store.dispatch(toggleCircumventionDrawer({ open: false }))
-        }}>Settings</a>.
+        }}>Kana qindeessaa keessa seenuun jijjiiruun ni danda’ama</a>
       </p>
     </div>
   ),
@@ -49,11 +52,13 @@ export const circumventionDrawerLabels = {
       Teeknooloojii haaraa uggura marsariitii jalaa itti miliqan beeksisi
       </p>
       <p>
-        You can change this in
+      VPN amasniisaa ta’e cufaa dha
+      </p>
+      <p>
         <a href='#' onClick={() => {
           store.dispatch(push('/settings'))
           store.dispatch(toggleCircumventionDrawer({ open: false }))
-        }}>Settings</a>.
+        }}>Kana qindeessaa keessa seenuun jijjiiruun ni danda’ama</a>
       </p>
     </div>
   ),
@@ -112,8 +117,8 @@ export const programsScreenLabels = {
 }
 
 export const psiphonLoadingLabels = {
-  bold: 'Please be patient.',
-  text: 'This may take a few minutes while we gather the best information for you.',
+  bold: '',
+  text: 'Filannoo sadaffaa: Odeeffannoo gaarii ta’e walitti qabuuf irratti hojjetaa jirra.',
 }
 
 export const pullToRefreshLabels = {
@@ -139,13 +144,13 @@ export const settingsLabels = {
   feedbackSubject: encodeURIComponent('Mata duree Email yaadi itti kennamu'),
   feedbackBody: encodeURIComponent('Qabiyyee emial ergamee'),
   shareMessage: 'Appii kana yaali',
-  psiphon: 'Secure proxy',
-  psiphonOn: 'On',
-  psiphonOff: 'Off',
+  psiphon: 'VPN amansiisaa',
+  psiphonOn: 'Bani',
+  psiphonOff: 'Cufi',
   resetPrimaryLanguage: 'Reset primary language',
   resetSecondaryLanguages: 'Reset secondary languages',
-  takeEffectOnRestart: 'You must restart the app for your changes to take effect.',
-  okay: 'Okay',
+  takeEffectOnRestart: 'Jijjiiramni ta’e akka hojjetuuf appicha  deebistee jalqabuu qabda.',
+  okay: 'Tole',
 }
 
 export const textSettingsLabels = {

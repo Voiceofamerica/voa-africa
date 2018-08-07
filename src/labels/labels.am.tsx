@@ -7,7 +7,8 @@ import toggleCircumventionDrawer from 'redux-store/actions/toggleCircumventionDr
 
 import { Audience } from 'helpers/graphql-types'
 
-export const languageName = 'አማኛ'
+export const appTopic = 'am'
+export const languageName = 'አማርኛ'
 export const languageCode = 'am'
 
 export const graphqlAudience = Audience.am
@@ -25,7 +26,7 @@ export const categorySettingsLabels = {
   allCategories: 'ሁሉም ምድቦች',
   dragAndDrop: 'ምድቦችዎን ወደዚህ ይሳቡ',
   headlinesFirst: 'አርዕስቱን በቅድሚያ አሥፍር',
-  cancel: 'Cancel',
+  cancel: 'ሰርዝ',
 }
 
 export const circumventionDrawerLabels = {
@@ -35,11 +36,13 @@ export const circumventionDrawerLabels = {
         እገዳን የማለፊያ ዘዴን ለተጠቃሚዎች አብራራ
       </p>
       <p>
-        You can change this in
+      ይኽ ከቪኦኤ ጋር ያለዎት ግንኙነት ማንነትዎን አይገልፅም
+      </p>
+      <p>
         <a href='#' onClick={() => {
           store.dispatch(push('/settings'))
           store.dispatch(toggleCircumventionDrawer({ open: false }))
-        }}>Settings</a>.
+        }}>ይኼንን በማስተካከያው /በሴቲንግ/ መለወጥ ይችላሉ</a>
       </p>
     </div>
   ),
@@ -49,11 +52,13 @@ export const circumventionDrawerLabels = {
         እገዳን የማለፊያ ዘዴን ለተጠቃሚዎች አብራራ
       </p>
       <p>
-        You can change this in
+      አስተማማኙ VPN ጠፍቷል
+      </p>
+      <p>
         <a href='#' onClick={() => {
           store.dispatch(push('/settings'))
           store.dispatch(toggleCircumventionDrawer({ open: false }))
-        }}>Settings</a>.
+        }}>ይኼንን በማስተካከያው /በሴቲንግ/ መለወጥ ይችላሉ</a>
       </p>
     </div>
   ),
@@ -81,7 +86,7 @@ export const homeLabels = {
 
 export const introLabels = {
   continue: 'ወደ ተከታዩ እለፍ...',
-  primary: 'Primary language',
+  primary: 'ቋንቋ ይምረጡ',
   primaryDescription: 'This is the language the app text will appear in',
   secondary: 'Secondary language',
   secondaryDescription: 'This determines the default categories to pull articles from',
@@ -110,8 +115,8 @@ export const programsScreenLabels = {
 }
 
 export const psiphonLoadingLabels = {
-  bold: 'Please be patient.',
-  text: 'This may take a few minutes while we gather the best information for you.',
+  bold: '',
+  text: 'መረጃዎቸዎን ለመሰብሰብ እየሰራን ነው',
 }
 
 export const pullToRefreshLabels = {
@@ -137,13 +142,13 @@ export const settingsLabels = {
   feedbackSubject: encodeURIComponent('የቪኦኤ አማርኛ የሞባይል አፕ አስተያየት መስጫ'),
   feedbackBody: encodeURIComponent(''),
   shareMessage: 'ይህንን አፕ ሞክረ/ሪው',
-  psiphon: 'Secure proxy',
-  psiphonOn: 'On',
-  psiphonOff: 'Off',
+  psiphon: 'አስተማማኝ VPN',
+  psiphonOn: 'ይብራ',
+  psiphonOff: 'ይጥፋ',
   resetPrimaryLanguage: 'Reset primary language',
   resetSecondaryLanguages: 'Reset secondary languages',
-  takeEffectOnRestart: 'You must restart the app for your changes to take effect.',
-  okay: 'Okay',
+  takeEffectOnRestart: 'ለውጦቹ እንዲተገበሩ አፑን መልሰው ይክፈቱት',
+  okay: 'እሽ',
 }
 
 export const textSettingsLabels = {
