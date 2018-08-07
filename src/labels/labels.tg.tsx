@@ -87,7 +87,7 @@ export const homeLabels = {
 export const introLabels = {
   continue: 'ቀጽል',
   primary: 'ቋንቋ ይምረጹ',
-  primaryDescription: 'This is the language the app text will appear in',
+  primaryDescription: '',
   secondary: 'Secondary language',
   secondaryDescription: 'This determines the default categories to pull articles from',
 }

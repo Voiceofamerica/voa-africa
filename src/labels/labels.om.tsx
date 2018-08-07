@@ -86,8 +86,8 @@ export const homeLabels = {
 
 export const introLabels = {
   continue: 'Itti fufi',
-  primary: 'Primary language',
-  primaryDescription: 'This is the language the app text will appear in',
+  primary: 'Afaan ke filadhu',
+  primaryDescription: '',
   secondary: 'Secondary language',
   secondaryDescription: 'This determines the default categories to pull articles from',
 }
