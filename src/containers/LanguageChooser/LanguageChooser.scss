@@ -38,6 +38,10 @@
     }
   }
 
+  .buttonText {
+    font-size: 0.8em;
+  }
+
   .continueButton {
     @include touchable();
     background: $voa-blue;

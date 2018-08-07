@@ -16,7 +16,7 @@ import * as AfaanOromoo from 'labels/labels.om'
 import * as Tigrigna from 'labels/labels.tg'
 import { introLabels } from 'labels'
 
-import { languageChooser, content, titles, spacer, explanation, continueButton } from 'containers/LanguageChooser/LanguageChooser.scss'
+import { languageChooser, content, explanation, continueButton, buttonText, spacer } from 'containers/LanguageChooser/LanguageChooser.scss'
 
 interface StateProps {
   primaryLanguage: LanguageCode
@@ -43,35 +43,30 @@ class SettingsRoute extends React.Component<Props> {
     return (
       <div className={languageChooser}>
         <div className={content}>
-          <div className={titles}>
-            <div>
-              {Amharic.introLabels.primary}
-            </div>
-            <div>
-              {AfaanOromoo.introLabels.primary}
-            </div>
-            <div>
-              {Tigrigna.introLabels.primary}
-            </div>
-          </div>
           <div className={spacer} />
           <Checkbox
             checked={primaryLanguage === Amharic.languageCode}
             onChange={() => setPrimaryLanguage(Amharic.languageCode)}
           >
-            {Amharic.languageName}
+            <span className={buttonText}>
+              {Amharic.introLabels.primary} - {Amharic.languageName}
+            </span>
           </Checkbox>
           <Checkbox
             checked={primaryLanguage === AfaanOromoo.languageCode}
             onChange={() => setPrimaryLanguage(AfaanOromoo.languageCode)}
           >
-            {AfaanOromoo.languageName}
+            <span className={buttonText}>
+              {AfaanOromoo.introLabels.primary} - {AfaanOromoo.languageName}
+            </span>
           </Checkbox>
           <Checkbox
             checked={primaryLanguage === Tigrigna.languageCode}
             onChange={() => setPrimaryLanguage(Tigrigna.languageCode)}
           >
-            {Tigrigna.languageName}
+            <span className={buttonText}>
+              {Tigrigna.introLabels.primary} - {Tigrigna.languageName}
+            </span>
           </Checkbox>
           {
             languageChosen

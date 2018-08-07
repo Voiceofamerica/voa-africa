@@ -3,6 +3,7 @@ import * as React from 'react'
 
 import Spinner from '@voiceofamerica/voa-shared/components/Spinner'
 import { ThemeConsumer } from '@voiceofamerica/voa-shared/components/ThemeProvider'
+import { renderReady } from 'redux-store'
 
 import { psiphonLoadingLabels } from 'labels'
 
@@ -12,6 +13,12 @@ interface Props {
 }
 
 export default class PsiphonLoading extends React.Component<Props> {
+  componentWillMount () {
+    renderReady.then(() => {
+      this.forceUpdate()
+    })
+  }
+
   render () {
     return (
       <ThemeConsumer>

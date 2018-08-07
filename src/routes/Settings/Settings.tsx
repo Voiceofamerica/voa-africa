@@ -29,37 +29,6 @@ const SHARE_URL = 'https://www.voanews.com/p/5850.html'
 
 const title = 'Settings'
 
-const data = {
-  textSize: [
-    {
-      description: textSettingsLabels.normalSize,
-      value: 1,
-    },
-    {
-      description: textSettingsLabels.largeSize,
-      value: 1.5,
-    },
-    {
-      description: textSettingsLabels.hugeSize,
-      value: 2,
-    },
-  ],
-  speed: [
-    {
-      description: mediaSettingsLabels.normalSpeed,
-      value: 1,
-    },
-    {
-      description: mediaSettingsLabels.halfAgainSpeed,
-      value: 1.5,
-    },
-    {
-      description: mediaSettingsLabels.doubleSpeed,
-      value: 2,
-    },
-  ],
-}
-
 interface StateProps {
   textSize: number
   mediaPlaybackRate: number
@@ -147,6 +116,20 @@ class SettingsRoute extends React.Component<Props> {
 
   renderTextSettings () {
     const { textSize, setTextSize } = this.props
+    const textSizeData = [
+      {
+        description: textSettingsLabels.normalSize,
+        value: 1,
+      },
+      {
+        description: textSettingsLabels.largeSize,
+        value: 1.5,
+      },
+      {
+        description: textSettingsLabels.hugeSize,
+        value: 2,
+      },
+    ]
 
     return (
       <div className={settingsRow}>
@@ -155,7 +138,7 @@ class SettingsRoute extends React.Component<Props> {
         </div>
         <div className={settingsValuesRow}>
           {
-            data.textSize.map(size => (
+            textSizeData.map(size => (
               <div
                 key={size.value}
                 className={`${settingsItem} ${size.value === textSize ? active : ''}`}
@@ -170,6 +153,20 @@ class SettingsRoute extends React.Component<Props> {
 
   renderPlaybackSpeed () {
     const { mediaPlaybackRate, setPlaybackRate } = this.props
+    const speedData = [
+      {
+        description: mediaSettingsLabels.normalSpeed,
+        value: 1,
+      },
+      {
+        description: mediaSettingsLabels.halfAgainSpeed,
+        value: 1.5,
+      },
+      {
+        description: mediaSettingsLabels.doubleSpeed,
+        value: 2,
+      },
+    ]
 
     return (
       <div className={settingsRow}>
@@ -178,7 +175,7 @@ class SettingsRoute extends React.Component<Props> {
         </div>
         <div className={settingsValuesRow}>
           {
-            data.speed.map(speed => (
+            speedData.map(speed => (
               <div
                 key={speed.value}
                 className={`${settingsItem} ${speed.value === mediaPlaybackRate ? active : ''}`}
