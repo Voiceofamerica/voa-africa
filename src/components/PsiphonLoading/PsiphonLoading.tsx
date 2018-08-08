@@ -16,7 +16,7 @@ export default class PsiphonLoading extends React.Component<Props> {
   componentWillMount () {
     renderReady.then(() => {
       this.forceUpdate()
-    })
+    }).catch()
   }
 
   render () {
